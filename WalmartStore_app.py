@@ -50,4 +50,4 @@ if st.button('Predict Weekly Sales'):
     prediction = lin_reg.predict(transformed_data_poly)
 
     # Display the prediction 
-    st.success(f'Predicted Weekly Sales: ${prediction:,.2f} million')
+    st.success(f'Predicted Weekly Sales: ${prediction[0]:,.2f} million')
