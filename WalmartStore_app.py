@@ -48,9 +48,6 @@ if st.button('Predict Weekly Sales'):
 
     # Make predictions
     prediction = lin_reg.predict(transformed_data_poly)
-    
-    # Convert prediction to millions
-    prediction_millions = prediction[0] / 1_000_000_000
 
     # Display the prediction 
-    st.success(f'Predicted Weekly Sales: ${prediction_millions:,.2f} million')
+    st.success(f'Predicted Weekly Sales: ${prediction:,.2f} million')
