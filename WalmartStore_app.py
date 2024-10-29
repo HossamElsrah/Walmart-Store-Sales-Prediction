@@ -52,5 +52,5 @@ if st.button('Predict Weekly Sales'):
     # Convert prediction to millions
     prediction_millions = prediction[0] / 1_000_000_000
 
-    # Display the prediction in millions with 2 decimal places
+    # Display the prediction 
     st.success(f'Predicted Weekly Sales: ${prediction_millions:,.2f} million')
