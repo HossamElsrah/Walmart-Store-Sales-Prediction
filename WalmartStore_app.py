@@ -9,7 +9,7 @@ data = pd.read_csv("streamlit_data.csv")
 # Load the preprocessor and model
 preprocessor = joblib.load('preprocessor.pkl')
 poly = joblib.load('poly.pkl')
-lin_reg = joblib.load('linear_regression_model.pkl')
+ridge_reg = joblib.load('ridge_reg_model.pkl')
 
 # Streamlit app layout
 st.title('Weekly Sales Prediction')
@@ -47,7 +47,7 @@ if st.button('Predict Weekly Sales'):
     transformed_data_poly = poly.transform(transformed_data)
 
     # Make predictions
-    prediction = lin_reg.predict(transformed_data_poly)
+    prediction = ridge_reg.predict(transformed_data_poly)
 
     # Display the prediction 
     st.success(f'Predicted Weekly Sales: ${prediction[0]:,.2f} million')
