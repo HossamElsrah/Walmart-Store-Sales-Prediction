@@ -19,16 +19,15 @@ Model Selection and Training
 To predict Weekly_Sales, three models were tested:
 
 Linear Regression: This model provided a strong baseline and was ultimately selected due to its high accuracy and simplicity. After tuning, it achieved an accuracy of 96.84%.
-Support Vector Regressor (SVR): This model was tuned using grid search to find optimal parameters, including linear and polynomial kernel options, but it showed slightly lower accuracy than Linear Regression.
-K-Nearest Neighbors (KNN) Regressor: Although it offered non-linear capabilities, after tuning with grid search, its performance also fell short of the accuracy achieved by Linear Regression.
-The models were evaluated using Root Mean Squared Error (RMSE) and R-squared (R²) scores. While the SVR and KNN models demonstrated good performance, Linear Regression achieved the highest accuracy of 96.84%, making it the final model selection for deployment.
+Support Vector Regressor (SVR): Using various kernel options and parameter tuning, the SVR model achieved an accuracy of 8.68%, making it less effective for this dataset.
+K-Nearest Neighbors (KNN) Regressor: Although it offered non-linear capabilities, after tuning with grid search, the KNN model reached an accuracy of 70.78%, performing better than SVR but still lower than Linear Regression.
+The models were evaluated using Root Mean Squared Error (RMSE) and R-squared (R²) scores. Despite the performance of SVR and KNN models, Linear Regression achieved the highest accuracy, making it the final model selection for deployment.
 
 Streamlit Application
 A Streamlit application was developed to provide an interactive interface where users can input specific values for features such as Store, Holidays, Fuel_Price, Temperature, CPI, Unemployment, Week, Month_Name, and Season. The app uses the pre-trained Linear Regression model to output a predicted Weekly_Sales value based on these inputs, making it a practical tool for users to forecast sales.
 
 Conclusion
 This project combines thorough EDA with machine learning modeling and an interactive application. With insights from univariate, bivariate, and time-based analyses, including seasonal trends, the Linear Regression model accurately predicts weekly sales, and the Streamlit app enables easy, real-time predictions. Future improvements could involve adding more granular seasonal and store-specific features and experimenting with advanced models to further optimize prediction accuracy.
-
 
 
 
